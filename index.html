@@ -4,27 +4,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Card Layout with Collapsible Sidebar</title>
+  <title>套件介紹</title>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.min.css">
 
+</head>
 <body>
+  
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">My Website</a>
+      <a class="navbar-brand" href="#">套件介紹</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://michalsnik.github.io/aos/" target="_blank">AOS</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis" target="_blank">語音轉文字</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://airbnb.io/lottie/#/" target="_blank">lottie</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://www.chartjs.org/" target="_blank">Chartjs</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API" target="_blank">Lazy-loading</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://threejs.org/examples/#webgl_animation_keyframes" target="_blank">Three.js</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://animejs.com/" target="_blank">anime.js</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://jqueryui.com/datepicker/" target="_blank">bootstrap&jquery日曆選擇器</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date" target="_blank">網頁內建日曆選擇器</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://docs.opencv.org/4.x/d0/d84/tutorial_js_usage.html" target="_blank">OpenCV.js</a></li>
         </ul>
       </div>
     </div>
@@ -33,7 +46,183 @@
   <div class="container-fluid my-5">
     <!-- Main content with cards -->
     <div class="col-lg-9 mx-auto">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4" id="cardss"></div>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4" id="cardss">
+
+        <div data-aos="fade-up" class="col">
+          <div class="card h-100">
+            <div class="card-frame-top aos-frame">
+              <div class="aos_example">
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="text_frame">
+                <h5 class="card-title">AOS動畫</h5>
+                <p class="card-text">AOS 可隨著使用者滾動頁面觸發動畫效果。這些效果可以針對特定元素在用戶可見範圍內出現時發生，增加動態性。</p>
+                <p class="aos_example_chinese">點擊藍色觸發</p>
+              </div>
+              <button class="aos_toMIDDLE">查看程式碼</button>
+              <a href="https://michalsnik.github.io/aos/" target="_blank" rel="noopener noreferrer">AOS官方網站</a>
+            </div>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" class="col">
+          <div class="card h-100">
+            <div class="card-frame-top">
+              <input type="text" class="T2S" placeholder="請輸入您的文字">
+            </div>
+            <div class="card-body">
+              <div class="text_frame">
+                <h5 class="card-title">文字轉語音</h5>
+                <p class="card-text">Windows內建文字轉語音</p>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis" target="_blank" rel="noopener noreferrer">語音轉文字API官網</a>
+              </div>
+              <button class="text2speech">點擊觸發</button>
+              <button class="text2speech_toMIDDLE">查看程式碼</button>
+            </div>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" class="col">
+          <div class="card h-100">
+            <div class="card-frame-top" id="lottie-animation">
+            </div>
+            <div class="card-body">
+              <div class="text_frame">
+                <h5 class="card-title">lottie動畫</h5>
+                <p class="card-text">lottie動畫</p>
+                <a href="https://airbnb.io/lottie/#/" target="_blank" rel="noopener noreferrer">lottie官網</a>
+              </div>
+              <button class="lottie_toMIDDLE">查看程式碼</button>
+            </div>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" class="col">
+          <div class="card h-100">
+            <div class="card-frame-top" id="chart">
+              <canvas id="chartjs" width="600" height="300" style="display: block; box-sizing: border-box; height: 300px; width: 600px;"></canvas>
+            </div>
+            <div class="card-body">
+              <div class="text_frame">
+                <h5 class="card-title">Chart.js</h5>
+                <p class="card-text">圖表產生工具</p>
+                <a href="https://www.chartjs.org/" target="_blank" rel="noopener noreferrer">Chartjs官網</a>
+              </div>
+              <button class="charts_toMIDDLE">查看程式碼</button>
+            </div>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" class="col">
+          <div class="card h-100">
+            <div class="card-frame-top">
+              <img data-src="http://fakeimg.pl/600x290/?text=Sample" class="lazy img-fluid" alt="Sample Image" src="http://fakeimg.pl/600x290/?text=Sample">
+            </div>
+            <div class="card-body">
+              <div class="text_frame">
+                <h5 class="card-title">Lazy-loading 懶加載</h5>
+                <p class="card-text">
+                  使用 Intersection Observer 實現的懶加載效果。
+                  基本功能就是在畫面還沒可以顯示出來的時候不顯示 當已經到了該顯示出來的時候在顯示
+                </p>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API" target="_blank" rel="noopener noreferrer">Intersection Observer API 官網</a>
+              </div>
+              <button class="lazy_toMIDDLE">查看程式碼</button>
+            </div>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" class="col">
+          <div class="card h-100">
+            <div class="card-frame-top three_square">
+
+            </div>
+            <div class="card-body">
+              <div class="text_frame">
+                <h5 class="card-title">Three.js</h5>
+                <p class="card-text">3D表現工具</p>
+                <a href="https://threejs.org/examples/#webgl_animation_keyframes" target="_blank" rel="noopener noreferrer">官方3D物件</a>
+              </div>
+              
+              <button class="Three_toMIDDLE">查看程式碼</button>
+            </div>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" class="col">
+          <div class="card h-100">
+            <div class="card-frame-top">
+              <div class="box lazy"></div>
+            </div>
+            <div class="card-body">
+              <div class="text_frame">
+                <h5 class="card-title">anime.js</h5>
+                <p class="card-text">動畫工具</p>
+                <a href="https://animejs.com/" target="_blank" rel="noopener noreferrer">anime.js官網</a>
+              </div>
+              <button class="anime_toMIDDLE">查看程式碼</button>
+              <button class="anime">點擊觸發</button>
+            </div>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" class="col">
+          <div class="card h-100">
+            <div class="card-frame-top">
+              <label for="datepicker" class="form-label">請選擇日期</label>
+              <input type="text" class="form-control" id="datepicker" placeholder="選擇日期" style="user-select: none;" autocomplete="off">
+
+            </div>
+            <div class="card-body">
+              <div class="text_frame">
+                <h5 class="card-title">bootstrap & jquery 的日曆選擇器 </h5>
+                <p class="card-text">日曆選擇器</p>
+                <a href="https://jqueryui.com/datepicker/" target="_blank" rel="noopener noreferrer">bootstrap & jquery 的日曆選擇器官網</a>
+              </div>
+              <button class="datepicker_toMIDDLE">查看程式碼</button>
+            </div>
+          </div>
+        </div>
+
+        
+        <div data-aos="fade-up" class="col">
+          <div class="card h-100">
+            <div class="card-frame-top">
+              <label for="datepicker" class="form-label">請選擇日期</label>
+              <input type="date" class="form-control" id="date" name="date" style="user-select: none;">
+            </div>
+            <div class="card-body">
+              <div class="text_frame">
+                <h5 class="card-title">網頁內建日曆選擇器</h5>
+                <p class="card-text"></p>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date" target="_blank" rel="noopener noreferrer">網頁內建日曆選擇器 官網</a>
+              </div>
+              
+              <button class="web_toMIDDLE">查看程式碼</button>
+            </div>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" class="col">
+          <div class="card h-100">
+            <div class="card-frame-top">
+              <canvas id="opencv_canvas" width="600" height="300" style="display: block; box-sizing: border-box; height: 300px; width: 600px;"></canvas>
+            </div>
+            <div class="card-body">
+              <div class="text_frame">
+                <h5 class="card-title">OpenCV.js 範例：將圖像轉換為灰階</h5>
+                <p class="card-text"></p>
+                <input type="file" id="upload" accept="image/*"> 
+                <br>
+                <a href="https://docs.opencv.org/4.x/d0/d84/tutorial_js_usage.html" target="_blank">OpenCV.js 官網</a>
+              </div>
+              <button class="opencv_toMIDDLE">查看程式碼</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
 
@@ -49,25 +238,97 @@
   <script>
     AOS.init();
   </script>
+  <script src="https://cdn.jsdelivr.net/gh/wallat/compiled-opencvjs/v4.2.0/opencv.js" async onload="onOpenCvReady();" type="text/javascript"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-sidebar/3.3.1/sticky-sidebar.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js" integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.13/lottie.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="/script/aos_example.js"></script>
+  <script src="/script/text2speech.js"></script>
+  <script src="/script/lotties.js"></script>
+  <script src="/script/charts.js"></script>
+  <script src="/script/lazy_loading.js"></script>
+  <script src="/script/threes.js"></script>
+  <script src="/script/animes.js"></script>
+  <script src="/script/bootstrap_datepicker.js"></script>
+  <script src="/script/opencvs.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    let $cardss = $("#cardss");
-    for (let i = 0; i < 12; i++) {
-      $cardss.append(`
-        <div data-aos="fade-up" class="col">
-          <div class="card h-100">
-            <img src="https://via.placeholder.com/150" class="card-img-top" alt="Card image">
-            <div class="card-body">
-              <h5 class="card-title">Card 3</h5>
-              <p class="card-text">This is a card with some example text.</p>
-            </div>
-          </div>
-        </div>
-        `);
-    }
-  </script>
+    $('.navbar-nav > li > a').on('click', function() {
+      $('.navbar-toggle').trigger('click');
+    });
+    </script>
 </body>
+<style>
+  .card-frame-top {
+    width: 100%;
+    height: 300px;
+    border: 2px solid black;
+  }
+
+  .text_frame {
+    width: 100%;
+    height: 130px;
+  }
+
+  .aos_example {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(134, 255, 255);
+    position: relative;
+    /* 為了定位偽元素 */
+  }
+
+  .aos_example::before,
+  .aos_example::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    /* X 的寬度 */
+    height: 100%;
+    /* X 的高度 */
+    background-color: black;
+    /* X 的顏色 */
+    transform: translate(-50%, -50%) rotate(45deg);
+    /* 旋轉形成 X */
+  }
+
+  .aos_example::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+    /* 另一條線旋轉形成 X */
+  }
+
+  .T2S {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* 取消 SweetAlert2 對話框內容的居中樣式 */
+  .swal2-html-container {
+    text-align: left !important;
+    /* 或者可以改成其他想要的對齊方式，如：right 或 justify */
+  }
+
+  /* 自定義寬度 */
+  .swal2-custom-width {
+    width: 80%;
+    /* 設置你想要的寬度 */
+  }
+
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    position: absolute;
+    left:10%;
+    top: 25%;
+    transform: translate(-50%, -50%);
+  }
+</style>
 
 </html>
